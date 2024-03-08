@@ -18,6 +18,11 @@ pipeline {
             steps{
                 echo 'Deploying...'
             }
+            post {
+                always {
+                    jiraSendDeploymentInfo environmentId: 'DOCACICD-2'
+                }
+            }
         }
     }
     
