@@ -6,7 +6,7 @@ pipeline {
     stages {
         stage('build') {
             steps{
-                echo 'Building...'
+                echo 'Building....'
             }
             post {
                 always {
@@ -20,7 +20,7 @@ pipeline {
             }
             post {
                 always {
-                    jiraSendDeploymentInfo environmentId: 'DOCACICD-2'
+                    jiraSendDeploymentInfo environmentId: 'DOCACICD-4'
                 }
             }
         }
